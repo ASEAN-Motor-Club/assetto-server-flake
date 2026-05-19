@@ -47,7 +47,11 @@ with lib; let
     UDP_PORT=${toString cfg.port}
     TCP_PORT=${toString cfg.port}
     CLIENT_SEND_INTERVAL_HZ=18
-    REGISTER_TO_LOBBY=${if cfg.isPrivate then "0" else "1"}
+    REGISTER_TO_LOBBY=${
+      if cfg.isPrivate
+      then "0"
+      else "1"
+    }
     PICKUP_MODE=1
     LOOP_MODE=1
     SLEEP_TIME=1
